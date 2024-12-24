@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Room Control</title>
+</head>
+
+<body>
+    <div class="page-header">
+        <img src="icons/camera active.png" alt="Header Image" class="header-image">
+        <h1 class="header-text">Room Control</h1>
+    </div>
+
+    <div class="sidebar">
+        <button id="home" class="sidebar-item">
+            <img src="icons/home1.png" alt="Home" id="home-img">
+        </button>
+        <button id="present" class="sidebar-item">
+            <img src="icons/Img_ButtonSideNav_Present_Inactive.png" alt="Present" id="present-img">
+        </button>
+        <button id="video_call" class="sidebar-item">
+            <img src="icons/Img_ButtonSideNav_VideoCall_Inactive.png" alt="Video Call" id="video_call-img">
+        </button>
+        <button id="room_control" class="sidebar-item">
+            <img src="icons/Img_ButtonSideNav_RoomControl_Selected.png" alt="Room Control" id="room_control-img">
+        </button>
+        <button id="mic-mute" class="sidebar-item">
+            <img src="icons/Img_ButtonMicControl_Inactive1.png" alt="Microphone">
+        </button>
+        <button id="volume-mute" class="sidebar-item">
+            <img src="icons/Img_ButtonSideNav_Volume_Inactive1.png" alt="Volume Mute" id="volume-mute-img">
+        </button>
+    </div>
+
+    <div class="main-container">
+        <div class="main-content">
+            <div class="displays">
+                <ul class="scrollable box1">
+                    <li><button>Display 1</button></li>
+                    <li><button>Display 2</button></li>
+                    <li><button>Display 3</button></li>
+                    <li><button>Display 4</button></li>
+                    <li><button>Display 5</button></li>
+                    <li><button>Display 6</button></li>
+                    <li><button>Display 7</button></li>
+                    <li><button>Display 8</button></li>
+                    <li><button>Display 9</button></li>
+                    <li><button>Display 10</button></li>
+                </ul>
+            </div>
+            <div class="input-sources">
+                <ul class="scrollable box2">
+                    <li><button>Laptop</button></li>
+                    <li><button>Wall Plate</button></li>
+                    <li><button>Cable TV</button></li>
+                    <li><button>Table Input 1</button></li>
+                    <li><button>Table Input 2</button></li>
+                    <li><button>Table Input 3</button></li>
+                    <li><button>Table Input 4</button></li>
+                    <li><button>Table Input 5</button></li>
+                    <li><button>Table Input 6</button></li>
+                    <li><button>Table Input 7</button></li>
+                    <li><button>Table Input 8</button></li>
+                    <li><button>Table Input 9</button></li>
+                    <li><button>Table Input 10</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="mic-modal" class="modal">
+        <div class="modal-content">
+            <div class="volume-controls">
+                <!-- Table Volume Control -->
+                <div class="volume-control">
+                    <label>Table</label>
+                    <div class="slider-container">
+                        <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up" id="table-volume-up">
+                        <input type="range" min="0" max="100" value="50" class="vertical-slider" id="table-volume">
+                        <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down" id="table-volume-down">
+                    </div>
+                    <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon"
+                        id="table-mute-icon">
+                </div>
+                <!-- Ceiling Volume Control -->
+                <div class="volume-control">
+                    <label>Ceiling</label>
+                    <div class="slider-container">
+                        <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up" id="ceiling-volume-up">
+                        <input type="range" min="0" max="100" value="50" class="vertical-slider" id="ceiling-volume">
+                        <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down" id="ceiling-volume-down">
+                    </div>
+                    <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon" id="ceiling-mute-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelector('#home').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+
+        document.querySelector('#video_call').addEventListener('click', function () {
+            const img = document.querySelector('#video_call-img');
+            img.src = img.src.includes('Inactive')
+                ? 'icons/Img_ButtonSideNav_VideoCall_Selected.png'
+                : 'icons/Img_ButtonSideNav_VideoCall_Inactive.png';
+
+            window.location.href = 'video_call.html';
+        });
+
+        document.querySelector('#present').addEventListener('click', function () {
+    const img = document.querySelector('#present-img');
+    img.src = img.src.includes('Inactive')
+        ? 'icons/Img_ButtonSideNav_Present_Selected.png'
+        : 'icons/Img_ButtonSideNav_Present_Inactive.png';
+        
+    window.location.href = 'present.html'; // This will navigate to present.html
+});
+
+        document.querySelector('#volume-mute').addEventListener('click', function () {
+            const img = document.querySelector('#volume-mute-img');
+            img.src = img.src.includes('Inactive')
+                ? 'icons/Img_ButtonSideNav_Volume_Selected.png'
+                : 'icons/Img_ButtonSideNav_Volume_Inactive1.png';
+        });
+
+        document.querySelector('#mic-mute').addEventListener('click', function () {
+    const modal = document.getElementById('mic-modal');
+    const micMuteImg = document.querySelector('#mic-mute img');
+    
+    // Check if the modal is already open
+    if (modal.style.display === 'flex') {
+        modal.style.display = 'none'; // Close the modal
+        micMuteImg.src = 'icons/Img_ButtonMicControl_Inactive1.png'; // Change back to original image
+    } else {
+        modal.style.display = 'flex'; // Open the modal
+        micMuteImg.src = 'icons/Img_ButtonMicControl_Inactive2.png'; // Change to the new image
+    }
+});
+
+
+        document.querySelectorAll('.box1 button').forEach(button => {
+            button.addEventListener('click', function () {
+                // Toggle the 'active' class on click
+                this.classList.toggle('active');
+            });
+        });
+
+        document.querySelectorAll('.box2 button').forEach(button => {
+            button.addEventListener('click', function () {
+                // Toggle the 'active' class on click
+                this.classList.toggle('active');
+            });
+        });
+
+        const muteIcons = document.querySelectorAll('.mute-icon');
+
+        // Add click event listeners to each mute icon
+        muteIcons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // Find the corresponding slider
+                const slider = icon.closest('.volume-control').querySelector('.vertical-slider');
+
+                // Check the current image source
+                if (icon.src.includes('Img_ButtonMicControl_Inactive.png')) {
+                    // Change to the selected mute icon
+                    icon.src = 'icons/Img_ButtonMicControl_Selected.png';
+                } else {
+                    // Change back to the original mute icon
+                    icon.src = 'icons/Img_ButtonMicControl_Inactive.png';
+                }
+            });
+        });
+
+        // Function to adjust volume and reset the mute icon
+        function adjustVolume(sliderId, change, muteIconId) {
+            const slider = document.getElementById(sliderId);
+            const muteIcon = document.getElementById(muteIconId);
+
+            // Adjust the slider value
+            slider.value = Math.min(100, Math.max(0, parseInt(slider.value) + change));
+
+            // If the slider value is increased, reset the mute icon
+            if (slider.value == 0) {
+                muteIcon.src = 'icons/Img_ButtonMicControl_Selected.png';
+            } else {
+                // If the slider value is above 0, set mute icon to 'inactive' (active state)
+                muteIcon.src = 'icons/Img_ButtonMicControl_Inactive.png';
+            }
+        }
+
+        // Volume control event listeners
+        document.getElementById('table-volume-up').addEventListener('click', () => adjustVolume('table-volume', 10, 'table-mute-icon'));
+        document.getElementById('table-volume-down').addEventListener('click', () => adjustVolume('table-volume', -10, 'table-mute-icon'));
+        document.getElementById('ceiling-volume-up').addEventListener('click', () => adjustVolume('ceiling-volume', 10, 'ceiling-mute-icon'));
+        document.getElementById('ceiling-volume-down').addEventListener('click', () => adjustVolume('ceiling-volume', -10, 'ceiling-mute-icon'));
+    
+        function setupHoverEffect(imgId, hoverSrc, originalSrc) {
+            const imgElement = document.getElementById(imgId);
+
+            imgElement.addEventListener('mouseenter', () => {
+                imgElement.src = hoverSrc; // Change to the hover image
+            });
+
+            imgElement.addEventListener('mouseleave', () => {
+                imgElement.src = originalSrc; // Revert to the original image
+            });
+        }
+
+        // Apply the hover effect to Volume Down and Volume Up buttons
+        setupHoverEffect('table-volume-down', 'icons/Img_ButtonMicControl_VolumeDown_Selected.png', 'icons/Img_ButtonMicControl_VolumeDown.png');
+        setupHoverEffect('table-volume-up', 'icons/Img_ButtonMicControl_VolumeUp_Selected.png', 'icons/Img_ButtonMicControl_VolumeUp.png');
+        setupHoverEffect('ceiling-volume-down', 'icons/Img_ButtonMicControl_VolumeDown_Selected.png', 'icons/Img_ButtonMicControl_VolumeDown.png');
+        setupHoverEffect('ceiling-volume-up', 'icons/Img_ButtonMicControl_VolumeUp_Selected.png', 'icons/Img_ButtonMicControl_VolumeUp.png');
+
+    </script>
+</body>
+
+</html>

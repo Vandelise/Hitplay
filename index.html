@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+  <div class="header-image-container">
+    <img src="icons/Img_SelectToBegin.png" alt="Image Below Header" class="header-image-begin">
+  </div>
+
+  <div class="home-container">
+    <div class="present-container">
+
+      <div class="menu-item" id="present">
+        <div class="icon">
+          <img src="icons/Img_MainMenuPresentation.png" alt="Present">
+        </div>
+        <h2>Present</h2>
+      </div>
+
+      <div class="menu-item" id="video-call">
+        <div class="icon">
+          <img src="icons/Img_MainMenuVideoCall.png" alt="Video Call">
+        </div>
+        <h2>Video Call</h2>
+      </div>
+
+      <div class="menu-item" id="room-control">
+        <div class="icon">
+          <img src="icons/Img_MainMenuRoomControl.png" alt="Room Control">
+        </div>
+        <h2>Room Control</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="watermark">
+    <img src="icons/Img_HomePageBottomImage.png" alt="Watermark Image">
+  </div>
+
+  <img src="icons/Img_SpinMasterLogo.png" alt="Image In Front" class="front-image">
+
+  <script>
+    document.querySelector('#present').addEventListener('click', function () {
+      window.location.href = 'present.html';
+    });
+
+    document.querySelector('#video-call').addEventListener('click', function () {
+      window.location.href = 'video_call.html';
+    });
+
+    document.querySelector('#room-control').addEventListener('click', function () {
+      window.location.href = 'room_control.html';
+    });
+    
+  </script>
+</body>
+</html>
