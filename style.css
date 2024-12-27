@@ -25,7 +25,7 @@ body {
     height: 100vh;
     width: 100vw;
     margin: 0;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .main {
@@ -107,6 +107,7 @@ body {
     float:left;
     max-height: 150px;
     min-width: 200px;
+    list-style: none;
 }
 
 .box1 button {
@@ -169,8 +170,9 @@ body {
 .modal {
     position: absolute;
     display: none;
-    top: 55%;
+    top: 45%;
     justify-content: left;
+    touch-action:none;
 }
 
 .modal-content {
@@ -251,4 +253,111 @@ input[type='range'] {
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+
+
+@media (max-width: 767px) {
+    body{
+        overflow: scroll;
+    }
+    /* Header */
+    .page-header {
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    .header-text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Transform sidebar into a top navbar */
+    .sidebar {
+        position: fixed;
+        width: 100%; /* Full width */
+        height: auto; /* Auto-adjust height */
+        display: flex;
+        flex-direction: row; /* Horizontal layout */
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .sidebar-item {
+        width: auto; /* Adjust width */
+        margin: 0; /* Remove left margin */
+        padding: 10px; /* Adjust padding */
+        font-size: 14px; /* Smaller font for smaller screens */
+        text-align: center;
+    }
+
+    .space {
+        height: auto; /* Adjust height */
+        width: 15%;
+    }
+
+    .button-img1 {
+        width: 100%; 
+        height: 100%;
+    }
+
+    /* Main content adjustments */
+    .main {
+        margin-top: 100px; 
+        width: 100%; /* Full width */
+        height: auto; /* Auto-adjust height */
+    }
+
+    .main-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align for better visibility */
+    }
+
+    /* Scrollable adjustments */
+    .scrollable.box1 {
+        max-height: 150px;
+    }
+
+    .scrollable.box2 {
+        max-height: 200px;
+    }
+
+    .box2 button {
+        font-size: 14px;
+        width: 100%;
+        height: auto;
+    }
+
+    .input-sources {
+        /* width: 90%; */
+        flex-direction: column;
+    }
+
+    .modal {
+        position: relative;
+        display: none;
+        top: 50%;
+        justify-content: left;
+    }
+
+    
+    /* Volume controls */
+    .volume-controls {
+        display: flex;
+    }
+
+    .slider-container {
+        gap: 20px;
+    }
+
+    .vertical-slider {
+        width: 100px;
+    }
+
+    .mute-icon,
+    .slider-container img {
+        width: 30px;
+        height: 30px;
+    }
 }

@@ -95,3 +95,38 @@ body {
     bottom: 0;
     position: absolute; 
 }
+
+@media (max-width: 767px) {
+    /* Adjust font sizes */
+    .text {
+        font-size: 10px; /* Smaller text size */
+    }
+
+    /* Resize header images */
+    .header-image-container {
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .header-image-begin {
+        width: 30%; /* Smaller width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Resize front image */
+    .front-image {
+        width: 10%; /* Shrink width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Resize icons in menu items */
+    .icon {
+        width: 60px; /* Smaller size */
+        height: 60px;
+    }
+
+    /* Adjust watermark image */
+    .watermark img {
+        width: 60%; /* Smaller width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
