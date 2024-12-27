@@ -9,91 +9,113 @@
 </head>
 
 <body>
-    <div class="page-header">
-        <img src="icons/camera active.png" alt="Header Image" class="header-image">
-        <h1 class="header-text">Present</h1>
-    </div>
     <div class="sidebar">
         <button id="home" class="sidebar-item">
-            <img src="icons/home1.png" alt="Home" id="home-img">
+            <img src="icons/home1.png" alt="Home" id="home-img" class="button-img1">
         </button>
         <button id="present" class="sidebar-item">
-            <img src="icons/Img_ButtonSideNav_Present_Selected.png" alt="Present" id="present-img">
+            <img src="icons/Img_ButtonSideNav_Present_Selected.png" alt="Present" id="present-img" class="button-img">
         </button>
         <button id="video_call" class="sidebar-item">
-            <img src="icons/Img_ButtonSideNav_VideoCall_Inactive.png" alt="Video Call" id="video_call-img">
+            <img src="icons/Img_ButtonSideNav_VideoCall_Inactive.png" alt="Video Call" id="video_call-img"
+                class="button-img">
         </button>
         <button id="room_control" class="sidebar-item">
-            <img src="icons/Img_ButtonSideNav_RoomControl_Inactive.png" alt="Room Control" id="room_control-img">
+            <img src="icons/Img_ButtonSideNav_RoomControl_Inactive.png" alt="Room Control" id="room_control-img"
+                class="button-img">
         </button>
+        <div class="space">
+
+        </div>
         <button id="mic-mute" class="sidebar-item">
-            <img src="icons/Img_ButtonMicControl_Inactive1.png" alt="Microphone">
+            <img src="icons/Img_ButtonMicControl_Inactive1.png" alt="Microphone" class="button-img1">
         </button>
         <button id="volume-mute" class="sidebar-item">
-            <img src="icons/Img_ButtonSideNav_Volume_Inactive1.png" alt="Volume Mute" id="volume-mute-img">
+            <img src="icons/Img_ButtonSideNav_Volume_Inactive1.png" alt="Volume Mute" id="volume-mute-img"
+                class="button-img">
         </button>
     </div>
+    <div class="main">
+        <div class="page-header">
+            <div class="page-header1">
+                <div class="header-text">
+                    <h1>Present</h1>
 
-    <div class="main-container">
-        <div class="main-content">
-            <div class="displays">
-                <ul class="scrollable box1">
-                    <li><button>Display 1</button></li>
-                    <li><button>Display 2</button></li>
-                    <li><button>Display 3</button></li>
-                    <li><button>Display 4</button></li>
-                    <li><button>Display 5</button></li>
-                    <li><button>Display 6</button></li>
-                    <li><button>Display 7</button></li>
-                    <li><button>Display 8</button></li>
-                    <li><button>Display 9</button></li>
-                    <li><button>Display 10</button></li>
-                </ul>
-            </div>
-            <div class="input-sources">
-                <ul class="scrollable box2">
-                    <li><button>Laptop</button></li>
-                    <li><button>Wall Plate</button></li>
-                    <li><button>Cable TV</button></li>
-                    <li><button>Table Input 1</button></li>
-                    <li><button>Table Input 2</button></li>
-                    <li><button>Table Input 3</button></li>
-                    <li><button>Table Input 4</button></li>
-                    <li><button>Table Input 5</button></li>
-                    <li><button>Table Input 6</button></li>
-                    <li><button>Table Input 7</button></li>
-                    <li><button>Table Input 8</button></li>
-                    <li><button>Table Input 9</button></li>
-                    <li><button>Table Input 10</button></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="mic-modal" class="modal">
-        <div class="modal-content">
-            <div class="volume-controls">
-                <!-- Table Volume Control -->
-                <div class="volume-control">
-                    <label>Table</label>
-                    <div class="slider-container">
-                        <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up" id="table-volume-up">
-                        <input type="range" min="0" max="100" value="50" class="vertical-slider" id="table-volume">
-                        <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down" id="table-volume-down">
-                    </div>
-                    <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon"
-                        id="table-mute-icon">
                 </div>
-                <!-- Ceiling Volume Control -->
-                <div class="volume-control">
-                    <label>Ceiling</label>
-                    <div class="slider-container">
-                        <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up" id="ceiling-volume-up">
-                        <input type="range" min="0" max="100" value="50" class="vertical-slider" id="ceiling-volume">
-                        <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down" id="ceiling-volume-down">
+                <div>
+                    <img src="icons/camera active.png" alt="Header Image" class="header-image">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-container">
+            <div class="main-content">
+                <div class="displays">
+                    <ul class="scrollable box1">
+                        <li><button>Display 1</button></li>
+                        <li><button>Display 2</button></li>
+                        <li><button>Display 3</button></li>
+                        <li><button>Display 4</button></li>
+                        <li><button>Display 5</button></li>
+                        <li><button>Display 6</button></li>
+                        <li><button>Display 7</button></li>
+                        <li><button>Display 8</button></li>
+                        <li><button>Display 9</button></li>
+                        <li><button>Display 10</button></li>
+                    </ul>
+                </div>
+                <div class="input-sources">
+                    <ul class="scrollable box2">
+                        <li><button>Laptop</button></li>
+                        <li><button>Wall Plate</button></li>
+                        <li><button>Cable TV</button></li>
+                        <li><button>Table Input 1</button></li>
+                        <li><button>Table Input 2</button></li>
+                        <li><button>Table Input 3</button></li>
+                        <li><button>Table Input 4</button></li>
+                        <li><button>Table Input 5</button></li>
+                        <li><button>Table Input 6</button></li>
+                        <li><button>Table Input 7</button></li>
+                        <li><button>Table Input 8</button></li>
+                        <li><button>Table Input 9</button></li>
+                        <li><button>Table Input 10</button></li>
+                    </ul>
+                </div>
+
+                <div id="mic-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="volume-controls">
+                            <!-- Table Volume Control -->
+                            <div class="volume-control">
+                                <label>Table</label>
+                                <div class="slider-container">
+                                    <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up"
+                                        id="table-volume-up">
+                                    <input type="range" min="0" max="100" value="50" class="vertical-slider"
+                                        id="table-volume">
+                                    <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down"
+                                        id="table-volume-down">
+                                </div>
+                                <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon"
+                                    id="table-mute-icon">
+                            </div>
+                            <!-- Ceiling Volume Control -->
+                            <div class="volume-control">
+                                <label>Ceiling</label>
+                                <div class="slider-container">
+                                    <img src="icons/Img_ButtonMicControl_VolumeUp.png" alt="Volume Up"
+                                        id="ceiling-volume-up">
+                                    <input type="range" min="0" max="100" value="50" class="vertical-slider"
+                                        id="ceiling-volume">
+                                    <img src="icons/Img_ButtonMicControl_VolumeDown.png" alt="Volume Down"
+                                        id="ceiling-volume-down">
+                                </div>
+                                <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon"
+                                    id="ceiling-mute-icon">
+                            </div>
+                        </div>
                     </div>
-                    <img src="icons/Img_ButtonMicControl_Inactive.png" alt="Mute" class="mute-icon"
-                        id="ceiling-mute-icon">
                 </div>
             </div>
         </div>
@@ -218,5 +240,4 @@
 
     </script>
 </body>
-
 </html>
